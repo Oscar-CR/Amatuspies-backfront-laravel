@@ -11,7 +11,7 @@ class ShowRequests extends Component
 
     public function render()
     {
-        $medicalAppointment = MedicalAppointment::all();
+        $medicalAppointment = MedicalAppointment::paginate(10);
         return view('livewire.show-requests', compact('medicalAppointment'));
     }
 }
